@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Maia-2</title>
+    <link rel="stylesheet" href="/static/vendor/chessground/chessground.base.css" />
+    <link rel="stylesheet" href="/static/vendor/chessground/chessground.brown.css" />
+    <link rel="stylesheet" href="/static/vendor/chessground/chessground.cburnett.css" />
+    <link rel="stylesheet" href="/static/css/app.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Maia-2</h1>
+      <div class="chip" id="bot-chip">loading model…</div>
+      <div class="spacer"></div>
+      <div class="chip rating-chip" id="rating-chip">— <span>RD —</span></div>
+      <button id="btn-ratings">Ratings</button>
+      <button id="btn-history">Games</button>
+      <button id="btn-settings">Settings</button>
+    </header>
+
+    <div class="layout">
+      <div class="board-col">
+        <div class="board-wrap">
+          <div class="cg-wrap" id="board"></div>
+          <div class="promotion-overlay hidden" id="promotion">
+            <div class="promotion-choices" id="promotion-choices"></div>
+          </div>
+        </div>
+        <div class="under-board hidden" id="graph-wrap">
+          <svg class="eval-graph" id="eval-graph" preserveAspectRatio="none"></svg>
+        </div>
+      </div>
+
+      <aside class="panel" id="panel"></aside>
+    </div>
+
+    <div class="toast hidden" id="toast"></div>
+
+    <div class="modal-backdrop hidden" id="modal-backdrop">
+      <div class="modal">
+        <header>
+          <h2 id="modal-title">Settings</h2>
+          <button id="modal-close">Close</button>
+        </header>
+        <div class="body" id="modal-body"></div>
+        <div class="foot" id="modal-foot"></div>
+      </div>
+    </div>
+
+    <script type="module" src="/static/js/app.js"></script>
+  </body>
+</html>
